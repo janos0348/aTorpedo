@@ -4,7 +4,7 @@ package torpedo;
 import java.util.Random;
 
 public class Torpedo {
-    static String eredmeny;
+    static talalat eredmeny;
     static int lovessekSzama;
     static int hajoHossz = 3;
     static Random rnd = new Random();
@@ -30,15 +30,15 @@ public class Torpedo {
         return poz;
     }
 
-    private static void loves(String talalat) {
-        while ( !(talalat == "sulyedt")) { 
+    private static void loves(talalat talalat) {
+        while ( !(talalat == talalat.NEMTALALT)) { 
             
             lovessekSzama++;
         }
     }
 
-    private static String ellenorzes() {
-        eredmeny = "talalt";
+    private static talalat ellenorzes() {
+        eredmeny = talalat.SULYEDT;
         return eredmeny;
     }
     
