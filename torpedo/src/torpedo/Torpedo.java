@@ -11,7 +11,7 @@ public class Torpedo {
     
     public static void main(String[] args) {
        hajo hajo = new hajo(pozicioGenerator());
-        
+        System.out.println(hajo);
         loves(ellenorzes());
         
     }
@@ -19,9 +19,10 @@ public class Torpedo {
     private static int[] pozicioGenerator() {
         int[] poz = new int[hajoHossz];
         for (int i = 0; i < hajoHossz; i++) {
-            poz[i]= rnd.nextInt(6) + 1;
-            if (true) {
-                
+            int reszHely = rnd.nextInt(6) + 1;
+            poz[i]= reszHely;
+            while (reszHely == poz[i-1]-1 || reszHely == poz[i-1]+1 && reszHely!=poz[i-1] && !(poz == null)) {
+                poz[i]= reszHely;
             }
         }
         return poz;
